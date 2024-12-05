@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+    <div class="container" [class.active]="isActive">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crear Usuario</h1>
+                
+                <span>Usa tu Email para registarte</span>
+                <input #nameInput type="text" placeholder="Nombre">
+                <input #emailInputs  type="email" placeholder="Correo">
+                <input #passwordInputs type="password" placeholder="Contraseña" maxlength="8">
+                <button >Registrate</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Inicia Sesión</h1>
+                <div class="social-icons">
+              
+                </div>
+                <span>Usa tu correo para ingresar</span>
+                <input #emailInput type="email" placeholder="Correo">
+                <input #passwordInput type="password" placeholder="Contraseña" maxlength="8">
+                <a href="#">Olvidastes tu contraseña?</a>
+                <button >Iniciar Sesion</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido de Vuelta!</h1>
+                    <p>Entra con tu Correo y Contraseña si ya creaste tu usuario</p>
+                    <button class="hidden" (click)="activateLogin()">Iniciar Sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hola Amigo!</h1>
+                    <p>En caso de que eres nuevo por favor ingresa aqui para crear tu usuario</p>
+                    <button class="hidden" (click)="activateRegister()">Registrarte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
